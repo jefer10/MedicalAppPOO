@@ -1,54 +1,16 @@
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Doctor {
-    static int id=0;
-    private String name;
-    private String email;
+public class Doctor extends User{
     private String speciality;
 
-
     //constructor
-    Doctor(){
-        System.out.println("contruyendo el objeto");
-        id++;
-    }
-    Doctor(String name,String speciality){
-        System.out.println("el nombre del dosctor es: "+this.name);
-        id++;
-        this.name=name;
-        this.speciality=speciality;
+    Doctor(String name,String email){
+        super(name,email);
+        System.out.println("el nombre del dosctor es: "+super.getName());
     }
 
-    //Comportamientos
-    /**
-     * Descripcion: la funcion solo imprime el nombre del doctor
-     */
-    public void  showName(){
-        System.out.println(name);
-    }
-
-    public void showId(){
-        System.out.println("numero de identificador: "+id);
-    }
-
-    //getter y setter
-    public static int getId() {
-        return id;
-    }
-
-    public static void setId(int id) {
-        Doctor.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
+    //Comportamientos o metodos
     public String getSpeciality() {
         return speciality;
     }
@@ -56,6 +18,7 @@ public class Doctor {
     public void setSpeciality(String speciality) {
         this.speciality = speciality;
     }
+
 
     /**
      * Descripcion:es una coleccion de objetos de tipo AvalaibleAppointment.
