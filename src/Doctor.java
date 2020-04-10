@@ -5,7 +5,7 @@ public class Doctor extends User{
     private String speciality;
 
     //constructor
-    Doctor(String name,String email){
+    public Doctor(String name,String email){
         super(name,email);
         System.out.println("el nombre del dosctor es: "+super.getName());
     }
