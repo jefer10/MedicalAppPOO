@@ -8,7 +8,17 @@ public class User {
     public User(String name, String email) {
         this.name = name;
         this.email = email;
-        id++;
+        id=id+1;
+    }
+
+    @Override
+    public String toString() {
+        return "User" + id+ '\''+"{"+
+                "name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", address='" + address + '\'' +
+                ", phoneNumbers='" + phoneNumbers + '\'' +
+                '}';
     }
 
     //getter y setter

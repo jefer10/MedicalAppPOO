@@ -11,6 +11,22 @@ public class Doctor extends User{
     }
 
     //Comportamientos o metodos
+
+    /**
+     * Descripcion:hace que el objeto "doctor" muestre todos sus atributos y
+     * que llame el metodo "toString()" de la clase anidada "AvailableAppointment"
+     * para mostrar todos los datos del objeto "doctor"
+     * @return Datos del objeto doctor en "String"
+     */
+    @Override
+    public String toString() {
+        return "Doctor{" +super.toString()+
+                "speciality='" + speciality + '\'' +
+                ", availableAppointments=" + availableAppointments.toString() +
+                '}';
+    }
+
+    //get y seter
     public String getSpeciality() {
         return speciality;
     }
@@ -57,9 +73,42 @@ public class Doctor extends User{
             this.date=date;
             this.time=time;
         }
+        //metodos
+
+
+        @Override
+        public String toString() {
+            return "AvailableAppointment{" +
+                    "id=" + id +
+                    ", date=" + date +
+                    ", time='" + time + '\'' +
+                    '}';
+        }
+
+        //getter y setter
+        public int getId() {
+            return id;
+        }
+
+        public void setId(int id) {
+            this.id = id;
+        }
+
+        public Date getDate() {
+            return date;
+        }
+
+        public void setDate(Date date) {
+            this.date = date;
+        }
+
+        public String getTime() {
+            return time;
+        }
+
+        public void setTime(String time) {
+            this.time = time;
+        }
     }
-
-
-
 
 }

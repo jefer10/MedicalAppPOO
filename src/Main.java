@@ -1,20 +1,22 @@
 import ui.UIMenu;
+
+import java.util.Date;
+
 import static ui.UIMenu.*;
 
 public class Main {
     public static void main(String[] args) {
-        Doctor myDoctor=new Doctor("pepito perez","pediatria");
-        myDoctor.name="pepito perez";
-        myDoctor.showName();
-        myDoctor.showId();
-        System.out.println(myDoctor.id);
+        Doctor myDoctor=new Doctor("pepito perez","pepito@gmail.doctor.co");
+        //System.out.println(myDoctor.getId()+" "+myDoctor.getName());
+        myDoctor.addAvalibleAppointment(new Date(),"5pm");
+        myDoctor.addAvalibleAppointment(new Date(),"10am");
+        myDoctor.addAvalibleAppointment(new Date(),"1pm");
+        System.out.println(myDoctor);//en java no se necesita poner "myDoctor.toString()"
 
-        Doctor doctor1=new Doctor();
-        doctor1.name="sutanejo";
-        doctor1.showName();
-        doctor1.showId();
-        System.out.println(doctor1.id);
+        Patient patient1=new Patient("juanito alimaña","juanito@gmail.co");
+        //System.out.println(patient1.getId()+" "+patient1.getName());
+        //System.out.println(patient1.toString());
 
-        showMenu();
+        //showMenu();
     }
 }

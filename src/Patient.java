@@ -13,6 +13,19 @@ public class Patient extends User{
         super(name,email);
     }
 
+    @Override
+    public String toString() {
+        return "Patient"+super.getId()+"{" +"name="+super.getName()+
+                ", email="+super.getEmail()+
+                ", address="+super.getAddress()+
+                ", numberPhone="+super.getPhoneNumbers()+
+                ", birthday='" + birthday + '\'' +
+                ", weight=" + weight +
+                ", height=" + height +
+                ", blood='" + blood + '\'' +
+                '}';
+    }
+
     //getter y setter
     public String getBirthday() {
         return birthday;
