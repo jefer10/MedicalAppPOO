@@ -26,6 +26,12 @@ public class Patient extends User{
                 '}';
     }
 
+    @Override
+    public void showDataUser() {
+        System.out.println("paciente:" + super.getId());
+        System.out.println("historia del paciente");
+    }
+
     //getter y setter
     public String getBirthday() {
         return birthday;

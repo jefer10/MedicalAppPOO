@@ -10,6 +10,11 @@ public class Doctor extends User{
         System.out.println("el nombre del dosctor es: "+super.getName());
     }
 
+    @Override
+    public void showDataUser() {
+        System.out.println("Hospital infantil");
+        System.out.println("Departamento: cancerologia");
+    }
     //Comportamientos o metodos
 
     /**

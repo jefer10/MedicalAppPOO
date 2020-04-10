@@ -1,4 +1,4 @@
-public class User {
+public abstract class User {
     private static int id;
     private String name;
     private String email;
@@ -20,6 +20,8 @@ public class User {
                 ", phoneNumbers='" + phoneNumbers + '\'' +
                 '}';
     }
+
+    public abstract void showDataUser();
 
     //getter y setter
     public int getId() {
