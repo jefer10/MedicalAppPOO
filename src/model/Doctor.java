@@ -1,3 +1,5 @@
+package model;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -25,7 +27,7 @@ public class Doctor extends User{
      */
     @Override
     public String toString() {
-        return "Doctor{" +super.toString()+
+        return "model.Doctor{" +super.toString()+
                 "speciality='" + speciality + '\'' +
                 ", availableAppointments=" + availableAppointments.toString() +
                 '}';

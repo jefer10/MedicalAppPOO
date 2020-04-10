@@ -1,3 +1,5 @@
+package model;
+
 public class Nurse extends User{
     private String Speciality;
 
@@ -7,7 +9,7 @@ public class Nurse extends User{
     }
 
     /**
-     * descripcion:es un metodo abstracto de la clase User.
+     * descripcion:es un metodo abstracto de la clase model.User.
      */
     @Override
     public void showDataUser() {

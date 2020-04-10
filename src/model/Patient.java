@@ -1,7 +1,9 @@
+package model;
+
 public class Patient extends User{
     //atributos
     /**
-     * descripcion: atributos de la clase Patient
+     * descripcion: atributos de la clase model.Patient
      */
     static int id;
     private String birthday;
@@ -15,7 +17,7 @@ public class Patient extends User{
 
     @Override
     public String toString() {
-        return "Patient"+super.getId()+"{" +"name="+super.getName()+
+        return "model.Patient"+super.getId()+"{" +"name="+super.getName()+
                 ", email="+super.getEmail()+
                 ", address="+super.getAddress()+
                 ", numberPhone="+super.getPhoneNumbers()+
