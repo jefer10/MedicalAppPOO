@@ -1,5 +1,7 @@
 package model;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -9,7 +11,7 @@ public class Doctor extends User{
     //constructor
     public Doctor(String name,String email){
         super(name,email);
-        System.out.println("el nombre del dosctor es: "+super.getName());
+        //System.out.println("el nombre del doctor es: "+super.getName());
     }
 
     @Override
@@ -54,7 +56,7 @@ public class Doctor extends User{
      * @param date la fecha de la cita
      * @param time la hora de la cita
      */
-    public void addAvalibleAppointment(Date date, String time){
+    public void addAvalibleAppointment(String date, String time){
         availableAppointments.add(new AvailableAppointment(date,time));
     }
 
@@ -75,9 +77,14 @@ public class Doctor extends User{
         private int id;
         private Date date;
         private String time;
+        SimpleDateFormat format=new SimpleDateFormat("dd/mm/yyyy");
 
-        public AvailableAppointment(Date date,String time){
-            this.date=date;
+        public AvailableAppointment(String date,String time){
+            try {
+                this.date=format.parse(date);//para usar la funcion parse de la clase formato se necesita el try-catch
+            }catch (ParseException e){
+                e.printStackTrace();
+            }
             this.time=time;
         }
         //metodos
@@ -103,6 +110,9 @@ public class Doctor extends User{
 
         public Date getDate() {
             return date;
+        }
+        public String getDate(String Date) {
+            return format.format(date);
         }
 
         public void setDate(Date date) {

@@ -3,9 +3,11 @@ import model.Patient;
 
 import java.util.Date;
 
+import static ui.UIMenu.showMenu;
+
 public class Main {
     public static void main(String[] args) {
-        Doctor myDoctor=new Doctor("pepito perez","pepito@gmail.doctor.co");
+        /*Doctor myDoctor=new Doctor("pepito perez","pepito@gmail.doctor.co");
         //System.out.println(myDoctor.getId()+" "+myDoctor.getName());
         myDoctor.addAvalibleAppointment(new Date(),"5pm");
         myDoctor.addAvalibleAppointment(new Date(),"10am");
@@ -14,8 +16,8 @@ public class Main {
 
         Patient patient1=new Patient("juanito alimaña","juanito@gmail.co");
         //System.out.println(patient1.getId()+" "+patient1.getName());
-        //System.out.println(patient1.toString());
+        //System.out.println(patient1.toString());*/
 
-        //showMenu();
+        showMenu();
     }
 }

@@ -42,6 +42,7 @@ public class UIMenu {
                     break;
                 case 0:
                     System.out.println("Thank you for you visit");
+                    response=0;
                     break;
                 default:
                     System.out.println("Please select a correct answer");
@@ -74,6 +75,7 @@ public class UIMenu {
                         //obtener el usuario logable
                         doctorLogged=d;
                         //showDoctorMenu
+                        UIDoctorMenu.showDoctorMenu();
                     }
                 }
             }

@@ -1,12 +1,18 @@
 package ui;
 
+import model.Doctor;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
  * descripcion: en esta clase se realiza toda la logica de las opciones del doctor.
  */
 public class UIDoctorMenu {
+    public static ArrayList<Doctor>doctorsAvailableAppointments=new ArrayList<>();
+
     public static void showDoctorMenu(){
+
         int response=0;
         do{
             System.out.println("\n\n");
@@ -20,6 +26,7 @@ public class UIDoctorMenu {
             response=Integer.valueOf(sc.nextLine());
             switch (response){
                 case 1:
+                    showAddAvaliableAppointmentsMenu();
                     break;
                 case 2:
                     break;
@@ -47,7 +54,7 @@ public class UIDoctorMenu {
             if (response>0 && response<4){
                 //1,2,3
                 int mothselected=response;
-                System.out.println(mothselected+" . "+UIMenu.MONTHS[mothselected]);
+                System.out.println(mothselected+" . "+UIMenu.MONTHS[mothselected-1]);
                 System.out.println("insert the date available: [d/m/año]");
                 String date=sc.nextLine();
 
@@ -64,6 +71,8 @@ public class UIDoctorMenu {
                     responseTime=Integer.valueOf(sc.nextLine());
                 }while(responseTime==2);
                 UIMenu.doctorLogged.addAvalibleAppointment(date,time);
+                checkDoctorAvailableAppointments(UIMenu.doctorLogged);
+
             }else {
                 if (response==0){
                     showDoctorMenu();
@@ -71,6 +80,12 @@ public class UIDoctorMenu {
             }
 
         }while (response!=0);
+    }
+
+    private static void  checkDoctorAvailableAppointments(Doctor doctor){
+        if (doctor.getAvailableAppointments().size()>0 && !doctorsAvailableAppointments.contains(doctor)){
+            doctorsAvailableAppointments.add(doctor);
+        }
     }
 
 }
