@@ -86,6 +86,7 @@ public class UIMenu {
                         //obtener el usuario logable
                         patientLogged=p;
                         //showPatientMenu
+                        UIPatientMenu.ShowPatientMenu();
                     }
                 }
             }
