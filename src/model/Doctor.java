@@ -108,10 +108,10 @@ public class Doctor extends User{
             this.id = id;
         }
 
-        public Date getDate() {
+        public Date getDate(String Date) {
             return date;
         }
-        public String getDate(String Date) {
+        public String getDate() {
             return format.format(date);
         }
 
